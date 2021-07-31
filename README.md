@@ -1,6 +1,6 @@
 
 
-<h1> Python Project</h1>
+<h1>PAP - python automation project</h1>
 
 Automação para encaminhar relatório semanal de vendas ao Shopping\
 Projeto iniciado em   22/06/2021
