@@ -2,10 +2,12 @@
 
 <h1>PAP - python automation project</h1>
 
-Automação para encaminhar relatório semanal de vendas ao Shopping\
-Projeto iniciado em   22/06/2021
+Automação para encaminhar relatório semanal de vendas ao Shopping
+Projeto iniciado em   22/06/2021  :computer:
 
-MOTIVAÇÃO PARA ESTE PROJETO:
+
+
+MOTIVAÇÃO:
 
 - multa de R$300 se não entregar o faturamento semanal até as 14h de cada segunda-feira
 - aprendizado com o python (estudo com vários vídeos do youtube)
@@ -18,7 +20,9 @@ MOTIVAÇÃO PARA ESTE PROJETO:
 
 
 
-Intenções do projeto:
+
+
+OBEJTIVO:
 
 - SITEMA INTELIGENTE DE RECOMENDAÇÃO DE NOVOS PRODUTOS PARA O CLIENTE (DESAFIO MAIOR...)
 - Dashboard em tempo real (ainda estudando...)
@@ -27,4 +31,16 @@ Intenções do projeto:
 
 
 
-by geanclm in 22/07/2021
+
+
+KAIZEN:
+
+- ajustes no código para segurança de dados sensíveis
+- gráfico seaborn comparativo de vendas
+- envio de sms de confirmação
+
+
+
+
+
+by geanclm in 14/10/2021
