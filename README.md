@@ -8,9 +8,11 @@ MOTIVAÇÃO:
 
 - multa de R$300 se não entregar o faturamento semanal até as 14h de cada segunda-feira
 - aprendizado com o python
-- gráfico para melhor análise dos dados
+- Leitura de tabela em arquivo .pdf
+- webscraping
+- gráfico para análise dos dados
 - análise exploratória do data frame
-- agendar tarefa
+- prática de segurança
 
 
 OBEJTIVO:
@@ -30,7 +32,7 @@ KAIZEN:
 - gráfico seaborn comparativo de vendas
 - análise em data frame com marcação de cor
 - envio de sms de confirmação
-- organização do código com tag markdown
+- organização do código com markdown
 
 
 by geanclm
