@@ -356,3 +356,20 @@ JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1652693892865	geckodriver	INFO	Listening on 127.0.0.1:59781
+1652693895945	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\geanc\\AppData\\Local\\Temp\\rust_mozprofilexScPEb"
+1652693897234	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\geanc\\AppData\\Local\\Temp\\rust_mozprofilexScPEb\\search.json.mozlz4", (void 0)))
+1652693903256	Marionette	INFO	Listening on port 59789
+1652693903759	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://magnolia.alterdata.cloud"
+JavaScript warning: https://magnolia.alterdata.cloud/scripts/shopup-bc3af44164.vendor.min.js, line 1: Script terminated by timeout at:
+bt@https://magnolia.alterdata.cloud/scripts/shopup-bc3af44164.vendor.min.js:1:13188
+trigger@https://magnolia.alterdata.cloud/scripts/shopup-bc3af44164.vendor.min.js:3:7298
+simulate@https://magnolia.alterdata.cloud/scripts/shopup-bc3af44164.vendor.min.js:3:8109
+n@https://magnolia.alterdata.cloud/scripts/shopup-bc3af44164.vendor.min.js:3:8404
+
+1652693919087	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1652694139325	Marionette	INFO	Stopped listening on port 59789
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 12068, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
