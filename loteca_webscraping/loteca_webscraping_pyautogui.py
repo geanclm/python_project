@@ -22,6 +22,10 @@ pyautogui.write(link)
 pyautogui.press('enter')
 time.sleep(3)
 
+pyautogui.click(x=2861, y=605)
+# pyautogui.click(x=3506, y=858)
+# pyautogui.click(x=3506, y=858)
+
 pyautogui.scroll(-250)
 
 # 2 - digitar o número do concurso no campo de busca
@@ -36,7 +40,8 @@ for i in range(10):
     time.sleep(1)
     pyautogui.write(str(i+1))
     pyautogui.press('enter')
-    time.sleep(3)    
+    # time.sleep(3)    
+    time.sleep(1)    
     pyautogui.tripleClick(x=2588, y=746)
     pyautogui.hotkey('ctrl', 'c')    
     resultados.append(pyperclip.paste())    
