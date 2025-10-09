@@ -3,6 +3,7 @@ import pyperclip
 import time
 import datetime
 import pytz
+import random
 
 # Configurações globais
 pyautogui.PAUSE = 0.3
@@ -28,29 +29,26 @@ def digitar_com_acentos(texto):
     pyperclip.copy(texto)
     pyautogui.hotkey("ctrl", "v")
 
-def pesquisar(frase_base, repeticoes=3, delay=3):
+def ler_frase_aleatoria(arquivo="frases.txt"):
+    """Lê uma frase aleatória de um arquivo .txt"""
+    with open(arquivo, "r", encoding="utf-8") as f:
+        frases = [linha.strip() for linha in f if linha.strip()]
+    return random.choice(frases)
+
+def pesquisar(repeticoes=3, delay=3, arquivo="frases.txt"):
     """
     Executa pesquisas no Edge usando CTRL+L para focar a barra de endereços.
-    Usa colagem via área de transferência para preservar acentos.
-    
-    frase_base: texto inicial da pesquisa
-    repeticoes: número de pesquisas adicionais
-    delay: tempo de espera entre pesquisas
+    A cada repetição escolhe uma frase diferente do arquivo.
     """
-    texto_base = f"{frase_base} {data_hoje()}"
+    for i in range(repeticoes + 1):
+        frase_base = ler_frase_aleatoria(arquivo)  # nova frase a cada loop
+        texto_base = f"{frase_base} {data_hoje()} {agora()}"
 
-    # Pesquisa inicial
-    pyautogui.hotkey("ctrl", "l")  # foca a barra de endereços
-    digitar_com_acentos(f"{texto_base} {agora()}")
-    pyautogui.press("enter")
-    time.sleep(delay)
-    
-    for i in range(repeticoes):
-        pyautogui.hotkey("ctrl", "l")  # volta para a barra de endereços
-        digitar_com_acentos(f"{texto_base} {agora()}")
+        pyautogui.hotkey("ctrl", "l")  # foca a barra de endereços
+        digitar_com_acentos(texto_base)
         pyautogui.press("enter")
         time.sleep(delay + i)
 
 if __name__ == "__main__":
-    abrir_edge()    
-    pesquisar('A influência da Inteligência Artificial no trabalho e estudo em', repeticoes=1, delay=3) 
+    abrir_edge()
+    pesquisar(repeticoes=30, delay=3)
