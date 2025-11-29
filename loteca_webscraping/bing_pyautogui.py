@@ -51,4 +51,4 @@ def pesquisar(repeticoes=3, delay=3, arquivo="frases.txt"):
 
 if __name__ == "__main__":
     abrir_edge()
-    pesquisar(repeticoes=30, delay=3)
+    pesquisar(repeticoes=60, delay=3)
