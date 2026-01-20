@@ -46,7 +46,7 @@ def abrir_edge():
     # pyautogui.write("Microsoft Edge")
     # pyautogui.press("enter")
     
-    pyautogui.hotkey("shift", "win", "f")
+    pyautogui.hotkey("shift", "win", "f") # Atalho para abrir busca do windows
     pyperclip.copy("btc hoje")
     pyautogui.hotkey("ctrl", "v")        
     pyautogui.press("enter")
@@ -82,7 +82,7 @@ def pesquisar(pesquisas=3, delay=3, arquivo="frases.txt"):
     Executa pesquisas no Edge usando CTRL+L para focar a barra de endereços.
     A cada repetição escolhe uma frase diferente do arquivo.
     """
-    for i in range(pesquisas + 1):
+    for i in range(pesquisas):
         frase_base = ler_frase_aleatoria(arquivo)  # nova frase a cada loop
         texto_base = f"{frase_base} {data_hoje()} {agora()}"
         pyautogui.hotkey("ctrl", "l")  # foca a barra de endereços
@@ -93,7 +93,7 @@ def pesquisar(pesquisas=3, delay=3, arquivo="frases.txt"):
 if __name__ == "__main__":
     abrir_edge()
     
-    pesquisas = 30  # Defina o número de pesquisas desejadas
+    pesquisas = 30  # Defina o número de pesquisas desejadas após a abertura do Edge
     delay = 1     # Defina o delay entre pesquisas
     pesquisar(pesquisas=pesquisas, delay=delay)    
 
