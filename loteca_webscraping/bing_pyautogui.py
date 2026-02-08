@@ -93,7 +93,7 @@ def pesquisar(pesquisas=3, delay=3, arquivo="frases.txt"):
 if __name__ == "__main__":
     abrir_edge()
     
-    pesquisas = 30  # Defina o número de pesquisas desejadas após a abertura do Edge
+    pesquisas = 1  # Defina o número de pesquisas desejadas após a abertura do Edge
     delay = 1     # Defina o delay entre pesquisas
     pesquisar(pesquisas=pesquisas, delay=delay)    
 
