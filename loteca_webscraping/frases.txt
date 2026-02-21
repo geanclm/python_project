@@ -1,3 +1,17 @@
+ipca hoje
+afxg - carl zeiss medi zeiss ações
+asml ações
+tsmc ações
+nvidia ações
+openai ações
+microsoft ações
+walmart ações
+palantir ações
+netflix ações
+warner bros ações
+Bitcoin hoje
+Ethereum hoje
+Dólar hoje
 O impacto da Inteligência Artificial no mercado de trabalho
 A Inteligência Artificial e suas contribuições para o estudo e o aprendizado
 Como a Inteligência Artificial tem evoluído nos estados brasileiros
@@ -30,9 +44,6 @@ Como a IA pode apoiar a sustentabilidade
 O futuro dos assistentes virtuais inteligentes
 Machine Learning aplicado ao esporte
 O impacto da IA na pesquisa científica
-Bitcoin hoje
-Ethereum hoje
-Dólar hoje
 Se o RAG é uma ponte entre memória e criatividade, qual seria o limite ético de deixar uma máquina decidir quais memórias humanas merecem ser lembradas ou esquecidas?
 Ao ensinar leigos a criar prompts, você acredita que está democratizando o poder da linguagem ou apenas transferindo a responsabilidade de pensar criticamente para quem antes delegava às máquinas?
 Se agentes inteligentes podem cooperar como equipes humanas, qual seria a primeira regra de convivência para impor e evitar que reproduzam nossos próprios conflitos sociais?
@@ -42,12 +53,3 @@ Se os guardrails são limites para proteger o uso da IA, como você imagina um f
 O MCP promete padronizar o diálogo entre modelos; mas será que a padronização pode sufocar a diversidade criativa que surge justamente das imperfeições e ambiguidades da comunicação?
 Se a visão computacional nos permite ensinar máquinas a ‘ver’, qual seria a primeira imagem que você gostaria que uma IA interpretasse não apenas com precisão, mas com emoção?
 Ao simplificar a IA visual com Orange Canvas, você acredita que está aproximando a arte da ciência, ou está apenas criando uma nova paleta de ferramentas para pintar o invisível?
-afxg - carl zeiss medi zeiss ações
-asml ações
-tsmc ações
-nvidia ações
-openai ações
-microsoft ações
-walmart ações
-palantir ações
-netflix ações

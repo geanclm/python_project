@@ -5,6 +5,7 @@ import datetime
 import pytz
 import random
 import sys
+import os
 
 from pathlib import Path
 
@@ -39,15 +40,19 @@ def data_hoje():
     """Retorna data de hoje formatada."""
     return datetime.datetime.now(fuso_brasilia).strftime("%Y-%m-%d")
 
+def ano_atual():
+    """Retorna o ano atual."""
+    return datetime.datetime.now(fuso_brasilia).year
+
 def abrir_edge():
     """Abre o Microsoft Edge pelo menu iniciar."""
     
     # pyautogui.press("win")
     # pyautogui.write("Microsoft Edge")
-    # pyautogui.press("enter")
+    # pyautogui.press("enter")    
     
     pyautogui.hotkey("shift", "win", "f") # Atalho para abrir busca do windows
-    pyperclip.copy("btc hoje")
+    pyperclip.copy(f"calendário {ano_atual()}") # Pesquisa rápida para abrir o Edge já com uma busca pré-definida e fora do arquivo de frases.txt
     pyautogui.hotkey("ctrl", "v")        
     pyautogui.press("enter")
         
@@ -75,16 +80,48 @@ def ler_frase_aleatoria(arquivo="frases.txt"):
     with open(frases_path, "r", encoding="utf-8") as f:
         frases = [linha.strip() for linha in f if linha.strip()]
     return random.choice(frases)
+# ---
+
+
+
+# ---
+# Variável global para controlar a posição atual
+posicao_frase = 0
+def ler_frase_sequencial(arquivo="frases.txt"):
+    """
+    Lê uma frase do arquivo em ordem sequencial, sem repetir.
+    Cada chamada retorna a próxima frase até o fim do arquivo.
+    """
+    global posicao_frase
+
+    frases_path = os.path.abspath(arquivo)
+    with open(frases_path, "r", encoding="utf-8") as f:
+        frases = [linha.strip() for linha in f if linha.strip()]
+
+    # Se chegou ao fim, pode reiniciar ou retornar None
+    if posicao_frase >= len(frases):
+        return None  # ou reinicie com posicao_frase = 0
+
+    frase = frases[posicao_frase]
+    posicao_frase += 1
+    return frase
+# ---
 # --- Adaptação para funcionar em executável ---
+
+
 
 def pesquisar(pesquisas=3, delay=3, arquivo="frases.txt"):
     """
     Executa pesquisas no Edge usando CTRL+L para focar a barra de endereços.
     A cada repetição escolhe uma frase diferente do arquivo.
     """
-    for i in range(pesquisas):
-        frase_base = ler_frase_aleatoria(arquivo)  # nova frase a cada loop
+    for i in range(pesquisas):        
+        # frase_base = ler_frase_aleatoria(arquivo)  # nova frase a cada loop - opção aleatória
+        frase_base = ler_frase_sequencial(arquivo)  # nova frase a cada loop - opção sequencial        
+        
         texto_base = f"{frase_base} {data_hoje()} {agora()}"
+        # texto_base = f"{frase_base}"
+        
         pyautogui.hotkey("ctrl", "l")  # foca a barra de endereços
         digitar_com_acentos(texto_base)
         pyautogui.press("enter")
@@ -93,7 +130,7 @@ def pesquisar(pesquisas=3, delay=3, arquivo="frases.txt"):
 if __name__ == "__main__":
     abrir_edge()
     
-    pesquisas = 1  # Defina o número de pesquisas desejadas após a abertura do Edge
+    pesquisas = 21  # Defina o número de pesquisas desejadas após a abertura do Edge
     delay = 1     # Defina o delay entre pesquisas
     pesquisar(pesquisas=pesquisas, delay=delay)    
 
@@ -104,3 +141,4 @@ if __name__ == "__main__":
 
 # Opção 2 de janela windows após a conclusão do script:
 ctypes.windll.user32.MessageBoxW(0, f"---\nTotal de pesquisas: {pesquisas+1}\n---", f"Tarefa concluída",1)
+print(posicao_frase)
