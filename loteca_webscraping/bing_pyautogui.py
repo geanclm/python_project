@@ -18,6 +18,8 @@ import ctypes
 
 # ---
 # by geanclm on 25/12/2025 at 7h30
+# update by geanclm on 28/1/2026 at 17h
+
 # Objetivo: Automatizar pesquisas no Bing via Microsoft Edge
 # Procedimento para arquivo executável com PyInstaller:
 # 1 - !pip install pyinstaller
@@ -130,7 +132,7 @@ def pesquisar(pesquisas=3, delay=3, arquivo="frases.txt"):
 if __name__ == "__main__":
     abrir_edge()
     
-    pesquisas = 20  # Defina o número de pesquisas desejadas após a abertura do Edge
+    pesquisas = 31  # Defina o número de pesquisas desejadas após a abertura do Edge
     delay = 1     # Defina o delay entre pesquisas
     pesquisar(pesquisas=pesquisas, delay=delay)    
 
