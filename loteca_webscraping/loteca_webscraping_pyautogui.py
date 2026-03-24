@@ -1,7 +1,7 @@
 # Loteca Webscraping
 # by geanclm on 28/01/2024
 
-# Objetivo do script: capturar todos os números do concurso da loteca respectivas datas de sorteio
+# Objetivo do script: capturar todos os números do concurso da loteca e suas respectivas datas de sorteio
 
 # importar bibliotecas necessárias
 import pyautogui
@@ -46,7 +46,7 @@ for i in range(10):
     pyautogui.hotkey('ctrl', 'c')    
     resultados.append(pyperclip.paste())    
 
-# salvar dados em dataframe
+# salvar dados em dataframe do pandas
 # Função para extrair o número do concurso e a data usando expressões regulares
 def extrair_info(resultado):
     match = re.search(r'Concurso (\d+).*\((\d{2}/\d{2}/\d{4})\)', resultado)
