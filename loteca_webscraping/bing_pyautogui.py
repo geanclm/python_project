@@ -6,7 +6,6 @@ import pytz
 import random
 import sys
 import os
-
 from pathlib import Path
 
 # Opção 1 de janela windows após a conclusão do script:
@@ -132,8 +131,8 @@ def pesquisar(pesquisas=3, delay=3, arquivo="frases.txt"):
 if __name__ == "__main__":
     abrir_edge()
     
-    pesquisas = 20  # Defina o número de pesquisas desejadas após a abertura do Edge
-    delay = 1     # Defina o delay entre pesquisas
+    pesquisas = 30   # Defina o número de pesquisas desejadas após a abertura do Edge
+    delay = 1       # Defina o delay entre pesquisas
     pesquisar(pesquisas=pesquisas, delay=delay)    
 
 # Opção 1 de janela windows após a conclusão do script:
@@ -144,3 +143,8 @@ if __name__ == "__main__":
 # Opção 2 de janela windows após a conclusão do script:
 ctypes.windll.user32.MessageBoxW(0, f"---\nTotal de pesquisas: {pesquisas+1}\n---", f"Tarefa concluída",1)
 print(posicao_frase)
+
+
+# ---
+# rodar o comando diretamente de qualquer pasta do windows
+# C:\Users\geanc> py C:\Users\geanc\OneDrive\Documentos\GitHub\python_project\loteca_webscraping\.\bing_pyautogui.py

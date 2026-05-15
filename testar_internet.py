@@ -129,3 +129,8 @@ def testar_internet():
 # ==============================
 if __name__ == "__main__":
     testar_internet()
+
+    
+# ---
+# rodar o comando diretamente de qualquer pasta do windows
+# py C:\Users\geanc\OneDrive\Documentos\GitHub\python_project\.\testar_internet.py
