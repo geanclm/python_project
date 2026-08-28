@@ -138,7 +138,7 @@ if __name__ == "__main__":
 # Opção 1 de janela windows após a conclusão do script:
 # root = tk.Tk()
 # root.withdraw()
-# messagebox.showinfo("Tarefa concluída", "A automação foi finalizada com sucesso!")
+# messagebox.show'info("Tarefa concluída", "A automação foi finalizada com sucesso!")
 
 # Opção 2 de janela windows após a conclusão do script:
 ctypes.windll.user32.MessageBoxW(0, f"---\nTotal de pesquisas: {pesquisas+1}\n---", f"Tarefa concluída",1)
